@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .github-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>GitHub Login</h2>
+        <p>Click the button below to log in with your GitHub account:</p>
+        <button class="github-button" onclick="redirectToGitHub()">Login with GitHub</button>
+    </div>
+
+    <script>
+        function redirectToGitHub() {
+            // Replace with your GitHub OAuth App's client ID
+            const clientId = 'YOUR_CLIENT_ID';
+            // Replace with the desired scopes (e.g., 'user:email')
+            const scopes = 'SCOPE1 SCOPE2';
+
+            // Redirect the user to the GitHub OAuth authorization URL
+            window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&scope=${scopes}`;
+        }
+    </script>
+</body>
+</html>
